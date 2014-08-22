@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InterviewPreparation
 {
-   public static class Arrays
+    public static class Arrays
     {
 
         /// <summary>
@@ -105,6 +105,60 @@ namespace InterviewPreparation
 
             return myarray;
         }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
+        public static int[,] MatrixMultiplication(int[,] a, int[,] b)
+        {
+            int N = a.Length;
+            int[,] c = new int[N, N];
+            for (int i = 0; i < N; i++)
+                for (int j = 0; j < N; j++)
+                {
+                    // Compute dot product of row i and column j.
+                    for (int k = 0; k < N; k++)
+                        c[i, j] += a[i, k] * b[k, j];
+
+                }
+            return c;
+
+        }
+
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="N"></param>
+        /// <returns></returns>
+        public static bool isPrime(int N)
+        {
+            if (N < 2) return false;
+            for (int i = 2;  i < N; i++)
+                if (N % i == 0) return false;
+            return true;
+
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="N"></param>
+        /// <returns></returns>
+        public static bool isPrimeBetter(int N)
+        {
+            if (N < 2) return false;
+            for (int i = 2; i * i <= N; i++)
+                if (N % i == 0) return false;
+            return true;
+
+        }
+
+
 
 
 

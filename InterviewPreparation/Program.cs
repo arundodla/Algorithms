@@ -27,14 +27,19 @@ namespace InterviewPreparation
 
 
             //Reverse Array
-            int[] d = { 1,2,3,4,5,6 };
+            //int[] d = { 1,2,3,4,5,6 };
             //Arrays.ReverseArray(d);
 
+            
 
-            d = Arrays.ReverseArrayEff(d);
-            for (int i = 0; i < d.Length; i++)
-                Console.WriteLine(d[i]);
-                Console.ReadLine();
+
+            //d = Arrays.ReverseArrayEff(d);
+            //for (int i = 0; i < d.Length; i++)
+            //    Console.WriteLine(d[i]);
+            //    Console.ReadLine();
+
+            Console.WriteLine(Arrays.isPrime(2));
+            Console.ReadLine();
         }
 
 
